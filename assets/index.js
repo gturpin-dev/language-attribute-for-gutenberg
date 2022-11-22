@@ -36,7 +36,7 @@ import './index.scss';
 import { BlockControls, RichTextToolbarButton } from '@wordpress/block-editor';
 import { TextControl, Button, Popover } from '@wordpress/components';
 import { useState } from '@wordpress/element';
-import { applyFormat, removeFormat, useAnchorRef } from '@wordpress/rich-text';
+import { registerFormatType, applyFormat, removeFormat, useAnchorRef } from '@wordpress/rich-text';
 import { ENTER } from '@wordpress/keycodes';
 
 const LangAttributeButton = ( props ) => {
