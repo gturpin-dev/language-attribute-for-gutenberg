@@ -118,7 +118,7 @@ const LangAttributeButton = ( props ) => {
 		
 // Register the Format.
 registerFormatType( 'lang-attribute/format-lang-attribute', {
-	className: null,
+	className: 'lang-attribute',
 	edit     : LangAttributeButton,
 	tagName  : 'span',
 	icon     : 'translation',
