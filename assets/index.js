@@ -13,7 +13,7 @@ import { __ } from '@wordpress/i18n';
 // 					console.log( 'Custom Button Clicked!' );
 // 					props.onChange( wp.richText.toggleFormat(
 // 						props.value,
-// 						{ type: 'lag/format-screen-reader-text' }
+// 						{ type: 'lang-attribute/format-screen-reader-text' }
 // 					) );
 // 				}
 // 			}
@@ -21,7 +21,7 @@ import { __ } from '@wordpress/i18n';
 // 	}
 	
 // 	// Register the screen reader format type used with the custom button on richText component
-// 	wp.richText.registerFormatType( 'lag/format-screen-reader-text', {
+// 	wp.richText.registerFormatType( 'lang-attribute/format-screen-reader-text', {
 // 		title    : __( 'Screen Reader Text', 'lang-attribute' ),
 // 		tagName  : 'span',
 // 		className: 'screen-reader-text',
@@ -58,7 +58,7 @@ const LangAttributeButton = ( props ) => {
 				title={ __( 'Lang attribute', 'lang-attribute' ) }
 				onClick={ () => {
 					if ( isActive ) {
-						onChange( removeFormat( value, 'lag/format-lang-attribute' ) );
+						onChange( removeFormat( value, 'lang-attribute/format-lang-attribute' ) );
 					} else {
 						togglePopover()
 					}
@@ -85,7 +85,7 @@ const LangAttributeButton = ( props ) => {
 						// 		// applyFormatWithLang()
 						// 		onChange(
 						// 			applyFormat( value, {
-						// 				type: 'lag/format-lang-attribute',
+						// 				type: 'lang-attribute/format-lang-attribute',
 						// 				attributes: {
 						// 					lang: lang
 						// 				}
@@ -101,7 +101,7 @@ const LangAttributeButton = ( props ) => {
 						onClick={ () => {
 							onChange(
 								applyFormat( value, {
-									type: 'lag/format-lang-attribute',
+									type: 'lang-attribute/format-lang-attribute',
 									attributes: {
 										lang: lang
 									}
@@ -117,7 +117,7 @@ const LangAttributeButton = ( props ) => {
 };
 		
 // Register the Format.
-registerFormatType( 'lag/format-lang-attribute', {
+registerFormatType( 'lang-attribute/format-lang-attribute', {
 	className: null,
 	edit     : LangAttributeButton,
 	tagName  : 'span',
