@@ -1,1 +1,1 @@
-# language-attribute-for-gutenberg
+# lang-attribute

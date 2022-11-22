@@ -7,7 +7,7 @@ import { __ } from '@wordpress/i18n';
 // 		return wp.element.createElement(
 // 			wp.editor.RichTextToolbarButton, {
 // 				icon    : 'tablet',
-// 				title   : __( 'Screen Reader Text' ),
+// 				title   : __( 'Screen Reader Text', 'lang-attribute' ),
 // 				isActive: props.isActive,
 // 				onClick : function() {
 // 					console.log( 'Custom Button Clicked!' );
@@ -22,7 +22,7 @@ import { __ } from '@wordpress/i18n';
 	
 // 	// Register the screen reader format type used with the custom button on richText component
 // 	wp.richText.registerFormatType( 'lag/format-screen-reader-text', {
-// 		title    : __( 'Screen Reader Text' ),
+// 		title    : __( 'Screen Reader Text', 'lang-attribute' ),
 // 		tagName  : 'span',
 // 		className: 'screen-reader-text',
 // 		edit     : customButton
@@ -33,8 +33,8 @@ import { __ } from '@wordpress/i18n';
 
 import './index.scss';
 
-import {  BlockControls } from '@wordpress/block-editor';
-import { TextControl, Button, Popover, ToolbarGroup, ToolbarButton } from '@wordpress/components';
+import { BlockControls, RichTextToolbarButton } from '@wordpress/block-editor';
+import { TextControl, Button, Popover } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import { applyFormat, removeFormat, useAnchorRef } from '@wordpress/rich-text';
 import { ENTER } from '@wordpress/keycodes';
@@ -52,22 +52,19 @@ const LangAttributeButton = ( props ) => {
 
 	return (
 		<>
-			<BlockControls>
-				<ToolbarGroup>
-					<ToolbarButton
-						icon="translation"
-						label={ __( 'Lang attribute', 'lag' ) }
-						onClick={ () => {
-							if ( isActive ) {
-								onChange( removeFormat( value, 'lag/format-lang-attribute' ) );
-							} else {
-								togglePopover()
-							}
-						} }
-						isActive={ isActive }
-					/>
-				</ToolbarGroup>
-			</BlockControls>
+			<RichTextToolbarButton
+				icon="translation"
+				label={ __( 'Lang attribute', 'lang-attribute' ) }
+				title={ __( 'Lang attribute', 'lang-attribute' ) }
+				onClick={ () => {
+					if ( isActive ) {
+						onChange( removeFormat( value, 'lag/format-lang-attribute' ) );
+					} else {
+						togglePopover()
+					}
+				} }
+				isActive={ isActive }
+			/>
 
 			{ isPopoverVisible && (
 				<Popover
@@ -76,7 +73,7 @@ const LangAttributeButton = ( props ) => {
 					position="bottom center"
 				>
 					<TextControl
-						label={ __( 'Lang attribute', 'lag' ) }
+						label={ __( 'Lang attribute', 'lang-attribute' ) }
 						value={ lang }
 						onChange={ lang => setLang( lang ) }
 						// TODO : To be the same as the onclick on button, but not working there
@@ -100,7 +97,7 @@ const LangAttributeButton = ( props ) => {
 					/>
 					<Button
 						isPrimary
-						text={ __( 'Apply', 'lag' ) }
+						text={ __( 'Apply', 'lang-attribute' ) }
 						onClick={ () => {
 							onChange(
 								applyFormat( value, {
@@ -125,5 +122,5 @@ wp.richText.registerFormatType( 'lag/format-lang-attribute', {
 	edit     : LangAttributeButton,
 	tagName  : 'span',
 	icon     : 'translation',
-	title    : __( 'Lang attribute', 'lag' ),
+	title    : __( 'Lang attribute', 'lang-attribute' ),
 } );
