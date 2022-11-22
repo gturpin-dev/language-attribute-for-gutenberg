@@ -1,11 +1,11 @@
 <?php 
 /**
- * Plugin Name: Language Attribute for Gutenberg
- * Plugin URI: https://whodunit.fr/attribut-langue-pour-gutenberg/
- * Description: Add language attribute to the Gutenberg blocks
+ * Plugin Name: Lang Attribute for the Block Editor
+ * Plugin URI: https://whodunit.fr/attribut-lang-pour-gutenberg-plugin
+ * Description: Add lang attribute to the text formatting toolbar in the block editor.
  * Version: 0.1
  * Author: Guillaume Turpin, Jb Audras, Whodunit Agency
- * Author URI: https://whodunit.fr/
+ * Author URI: https://whodunit.fr
  * text-domain: lang-attribute
  */
 
