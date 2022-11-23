@@ -39,6 +39,7 @@ import { useState } from '@wordpress/element';
 import { registerFormatType, applyFormat, removeFormat, useAnchorRef } from '@wordpress/rich-text';
 import { ENTER } from '@wordpress/keycodes';
 
+
 const LangAttributeButton = ( props ) => {
 	const { contentRef, isActive, onChange, value } = props;
 	const anchorRef = useAnchorRef( { ref: contentRef, value } );
