@@ -96,7 +96,7 @@ const LangAttributeButton = ( props ) => {
 						// } }
 					/>
 					<p class="lang-attribute-info">
-						<em>{ __( 'Should be a valid language tag, like "en" or "fr".', 'lang-attribute' ) }</em>
+						<em>{ __( 'Should be a valid lang attribute, like "en" or "fr".', 'lang-attribute' ) }</em>
 					</p>
 					<Button
 						isPrimary
