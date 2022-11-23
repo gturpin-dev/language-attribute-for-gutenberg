@@ -95,6 +95,9 @@ const LangAttributeButton = ( props ) => {
 						// 	}
 						// } }
 					/>
+					<p class="lang-attribute-info">
+						<em>{ __( 'Should be a valid language tag, like "en" or "fr".', 'lang-attribute' ) }</em>
+					</p>
 					<Button
 						isPrimary
 						text={ __( 'Apply', 'lang-attribute' ) }
