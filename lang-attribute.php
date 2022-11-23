@@ -1,13 +1,13 @@
 <?php 
 /**
  * Plugin Name: Lang Attribute for the Block Editor
- * Plugin URI: https://www.yourwebsiteurl.com/
+ * Plugin URI: https://whodunit.fr/attribut-lang-pour-gutenberg-plugin
  * Description: Add lang attribute to the text formatting toolbar in the block editor.
- * Version: 1.0
- * Author: Guillaume Turpin
- * Author URI: https://github.com/gturpin-dev
+ * Version: 0.1
+ * Author: Guillaume Turpin, Jb Audras, Whodunit Agency
+ * Author URI: https://whodunit.fr
  * text-domain: lang-attribute
-**/
+ */
 
 add_action( 'enqueue_block_editor_assets', function() {
 	wp_enqueue_script( 'lang-attribute',
