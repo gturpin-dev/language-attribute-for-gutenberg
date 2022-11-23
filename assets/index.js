@@ -121,8 +121,8 @@ const LangAttributeButton = ( props ) => {
 };
 		
 // Register the Format.
-registerFormatType( 'lang-attribute/format-lang-attribute', {
-	className: 'lang-attribute',
+wp.richText.registerFormatType( 'lag/format-lang-attribute', {
+	className: null,
 	edit     : LangAttributeButton,
 	tagName  : 'span',
 	icon     : 'translation',
