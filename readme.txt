@@ -8,7 +8,7 @@ Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin adds a lang formatting option to facilitate adding a lang 
+Add lang attribute to the text formatting toolbar in the block editor.
 
 == Description ==
 
